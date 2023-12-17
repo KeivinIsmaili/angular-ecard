@@ -1,0 +1,15 @@
+<div class="ecard--product--container">
+    <img [src]='product.image'>
+    <p>Name: {{ product.name }}</p>
+    <p>Price: {{ '$' + product.price }}</p>
+    <p>Color: {{ product.color }}</p>
+    <p>Discount Price: {{ '$' + getDiscountedPrice().toFixed(2) }}</p>
+    <p>InStock: {{ product.inStock > 0 ? 'Only ' + product.inStock + ' left' : 'Not in Stock' }}</p>
+    <div>
+        <button (click)="decrementValue()">-</button>
+        <span>{{ addToCard }}</span>
+        <button (click)="incrementValue()">+</button>
+    </div>
+    <button [disabled]=" !(product.inStock > 0) ">Buy now</button>
+    <input (input)="onNameChange($event)">
+</div>
