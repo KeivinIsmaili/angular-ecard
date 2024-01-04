@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-product-list',
-  templateUrl: './product-list.component.html',
-  styleUrl: './product-list.component.scss'
+  selector: 'app-container',
+  templateUrl: './container.component.html',
+  styleUrl: './container.component.scss'
 })
-export class ProductListComponent {
+export class ContainerComponent {
 
   name = 'John Smith';
   addToCard: number = 0;
@@ -17,6 +17,7 @@ export class ProductListComponent {
     inStock: 5,
     image: 'assets/images/iphone-13.jpg'
   }
+  listOfStrings: string[] = ['Mark', 'Steve', 'Mary', 'John', 'Sarah']
 
   getDiscountedPrice() {
     return this.product.price - this.product.price * this.product.discount / 100

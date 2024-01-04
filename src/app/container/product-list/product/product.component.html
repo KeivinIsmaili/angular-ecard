@@ -1,0 +1,20 @@
+<div class="ecard--product--item">
+    <div class="ecard--wishlist--sale--container">
+        <div class="ecard--add--to--wishlist">
+            <i class="fa fa-heart-o" aria-hidden="true"></i>
+        </div>
+        <div class="ecard--on--sale--tag" *ngIf="product.price">75% OFF</div>
+    </div>
+    <div class="ecard--product--image">
+        <img src={{product.image_url}} class="ecard--product--image">
+    </div>
+    <div class="ecard--add-to--price">
+        {{product.price}}
+    </div>
+    <div class="ecard--product--name"> {{product.name}}</div>
+    <div class="ecard--product--category">{{product.gender}} . {{product.category}} . {{product.brand}}</div>
+    <div class="ecard--product--available-colors">{{product.color}} Colors . Best Sellers</div>
+    <div class="ecard--product--in--stock" [ngStyle]="{fontWeight: 'bold', color: product.is_in_inventory ? 'Green' : 'Red' }">
+        {{product.is_in_inventory ? 'Available in stock': 'Not available in stock'}}
+    </div>
+</div>
