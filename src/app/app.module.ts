@@ -12,6 +12,7 @@ import { ProductListComponent } from './container/product-list/product-list.comp
 import { CommonModule } from '@angular/common';
 import { ProductComponent } from './container/product-list/product/product.component';
 import { FilterComponent } from './container/product-list/filter/filter.component';
+import { ProductDetailComponent } from './container/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FilterComponent } from './container/product-list/filter/filter.componen
     SearchComponent,
     ProductListComponent,
     ProductComponent,
-    FilterComponent
+    FilterComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,

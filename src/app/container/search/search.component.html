@@ -1,5 +1,5 @@
 <div class="ecard--search--product">
-    <input class="ecard-search-product-input" [(ngModel)]="searchText">
-    <button [ngClass]="{'btn': true, 'btn-search': searchText, 'btn-search-disabled': !searchText}" [disabled]="!searchText">Search</button>
+    <input class="ecard-search-product-input" #searchInput>
+    <button class="btn btn-search" (click)="updateSearchText(searchInput)">Search</button>
 </div>
 <div class="ecard-search-result-for"><p *ngIf="searchText != ''"><strong>Search result for:</strong> {{ searchText }}</p></div>

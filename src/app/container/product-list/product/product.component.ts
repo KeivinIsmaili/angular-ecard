@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Product } from '../../../models/product';
 
 @Component({
   selector: 'app-product',
@@ -7,21 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class ProductComponent {
   //decorator used to pass data between parent and child component
-  @Input()
-  product: {
-    id: number, 
-    name: string, 
-    description: string,
-    brand: string,
-    gender: string,
-    category: string,
-    size: number,
-    color: string,
-    price: number,
-    //? makes our property optional
-    discountPrice?: number,
-    is_in_inventory: boolean,
-    items_left: number,
-    image_url: string
-  };
+  @Input() product: Product;
 }

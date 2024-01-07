@@ -1,9 +1,10 @@
 <app-filter [all]="totalCount" [inStock]="totalProductsInStock" [outOfStock]="totalProductsOutOfStock"
 (selectedFilterRadioButtonChanged)="onFilterChanged($event)">    
 </app-filter>
+<!-- *ngIf="selectedFilterRadioButton === 'all' || prod.is_in_inventory.toString() === selectedFilterRadioButton" -->
 <div class="ecard--product--container">
-    <div *ngFor="let prod of products">
-        <app-product [product]="prod" *ngIf="selectedFilterRadioButton === 'all' || prod.is_in_inventory.toString() === selectedFilterRadioButton">
+    <div *ngFor="let prod of products" (click)="selectedProduct = prod">
+        <app-product [product]="prod" *ngIf="prod.name.toLowerCase().includes(searchText)">
         </app-product>
     </div>
 </div>

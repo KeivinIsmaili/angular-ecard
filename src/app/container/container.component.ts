@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class ContainerComponent {
 
+  searchText: string = '';
+
   name = 'John Smith';
   addToCard: number = 0;
   product = {
@@ -37,6 +39,10 @@ export class ContainerComponent {
 
   onNameChange(event: any) {
     this.name = event.target.value;
+  }
+
+  setSearchText(value) {
+    this.searchText = value;
   }
 
 }
