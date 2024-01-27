@@ -3,12 +3,13 @@
         <i class="fa fa-times" aria-hidden="true"></i>
     </div>
     <div class="ecard--product--detail--image">
-        <img src="https://st.mngbcn.com/rcs/pics/static/T5/fotos/S20/57046711_99.jpg?ts=1691397201046&imwidth=445&imdensity=2" class="ecard--product--detail--image">
+        <img src="https://st.mngbcn.com/rcs/pics/static/T5/fotos/S20/57046711_99.jpg?ts=1691397201046&imwidth=445&imdensity=2"
+            class="ecard--product--detail--image">
     </div>
 
     <div class="ecard--product--detail">
         <div class="ecard--product--detail--name">
-            <h2>Michael February SKT-Hi</h2>
+            <h2>{{product.name}}</h2>
         </div>
         <div class="ecard--product--detail--gbc">
             <span>MEN</span>
@@ -33,5 +34,35 @@
                 <span class="ecard--product--detail--available--size">9</span>
             </div>
         </div>
+
+        <div class="ecard--product--detail--color">
+            <div style="padding: 5px 0px; border-bottom: #ccc 2px solid">
+                <h4>Available Color</h4>
+            </div>
+            <div style="margin-top: 20px;">
+                <span class="ecard--product--detail--available--color" style="background-color:red ;"></span>
+                <span class="ecard--product--detail--available--color" style="background-color:green ;"></span>
+                <span class="ecard--product--detail--available--color" style="background-color:black ;"></span>
+                <span class="ecard--product--detail--available--color" style="background-color:blue ;"></span>
+            </div>
+        </div>
+
+        <div class="ecard--product--detail--desc">
+            <div style="padding: 5px 0px; border-bottom: #ccc 2px solid;">
+                <h4>Product Description</h4>
+            </div>
+            <div style="margin-top: 20px;">
+                <p>DESCRIPTION</p>
+            </div>
+        </div>
+
     </div>
+
+    <div class="ecard--product--detail--addToCard">
+        <button class="btn-add-to-card" *ngIf="product.is_in_inventory; else notifyMe">ADD TO CARD</button>
+        <ng-template #notifyMe>
+            <button class="btn-add-to-card" *ngIf="product.is_in_inventory">NOTIFY ME</button>
+        </ng-template>
+    </div>
+
 </div>

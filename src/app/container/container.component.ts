@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { ProductListComponent } from './product-list/product-list.component';
 
 @Component({
   selector: 'app-container',
@@ -20,6 +21,9 @@ export class ContainerComponent {
     image: 'assets/images/iphone-13.jpg'
   }
   listOfStrings: string[] = ['Mark', 'Steve', 'Mary', 'John', 'Sarah']
+
+  //we can use the name of the component
+  @ViewChild(ProductListComponent) productListComponent: ProductListComponent;
 
   getDiscountedPrice() {
     return this.product.price - this.product.price * this.product.discount / 100
