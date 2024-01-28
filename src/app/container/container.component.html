@@ -3,4 +3,21 @@
     <product-list [searchText]="searchText" #productListComponent></product-list>
     <product-detail *ngIf="productListComponent.selectedProduct" [productListComp]="productListComponent">
     </product-detail>
+    <div class="ecard--featured--products">
+        <div class="ecard--featured--product--heading">
+            <h1>Latest arrival in popular brands</h1>
+        </div>
+        <featured-brands>
+            <h3 class="title">New Arrivals in Nike</h3>
+            <button class="call--to--action">Show new arrival in Nike</button>
+        </featured-brands>
+        <featured-brands>
+            <h3 class="title">New Arrivals in Adidas</h3>
+            <button class="call--to--action">Show new arrival in Adidas</button>
+        </featured-brands>
+        <featured-brands>
+            <h3 class="title">New Arrivals in Colmar</h3>
+            <button class="call--to--action">Show new arrival in Colmar</button>
+        </featured-brands>
+    </div>
 </div>
