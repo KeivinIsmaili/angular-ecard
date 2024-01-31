@@ -14,6 +14,10 @@ import { ProductComponent } from './container/product-list/product/product.compo
 import { FilterComponent } from './container/product-list/filter/filter.component';
 import { ProductDetailComponent } from './container/product-detail/product-detail.component';
 import { FeaturedBrandsComponent } from './container/featured-brands/featured-brands.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LoginModule } from './login/login.module';
 
 @NgModule({
   declarations: [
@@ -28,12 +32,16 @@ import { FeaturedBrandsComponent } from './container/featured-brands/featured-br
     ProductComponent,
     FilterComponent,
     ProductDetailComponent,
-    FeaturedBrandsComponent
+    FeaturedBrandsComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    HttpClientModule,
+    AppRoutingModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]
