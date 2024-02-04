@@ -4,13 +4,16 @@
 			<form class="login">
 				<div class="login__field">
 					<fa-icon class="login__icon" [icon]="faUser"></fa-icon>
-					<input type="text" class="login__input" placeholder="User name / Email">
+					<input (change)="onUsernameInputFilled($event)" type="text" class="login__input" placeholder="User name"
+					[(ngModel)]="signinRequest.username" [ngModelOptions]="{standalone: true}">
 				</div>
 				<div class="login__field">
 					<fa-icon class="login__icon" [icon]="faLock"></fa-icon>
-					<input type="password" class="login__input" placeholder="Password">
+					<input (change)="onPasswordInputFilled($event)" type="password" class="login__input" placeholder="Password"
+					[(ngModel)]="signinRequest.password" [ngModelOptions]="{standalone: true}">
 				</div>
-				<button class="button login__submit">
+				<button class="button login__submit" (click)="onLogin()" 
+				[disabled]="!isUsernameFieldFilled || !isPasswordFieldFilled">
 					<span class="button__text">Log In Now</span>
 					<fa-icon class="button__icon" [icon]="faArrowRight"></fa-icon>
 				</button>				

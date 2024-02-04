@@ -12,6 +12,8 @@ import { TopHeaderModule } from './top-header/top-header.module';
 import { PageNotFoundModule } from './page-not-found/page-not-found.module';
 import { HeaderModule } from './header/header.module';
 import { ContainerModule } from './container/container.module';
+import { ToastrModule } from 'ngx-toastr';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { ContainerModule } from './container/container.module';
     FormsModule,
     CommonModule,
     HttpClientModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule,
     AppRoutingModule,
     LoginModule,
     TopHeaderModule,
