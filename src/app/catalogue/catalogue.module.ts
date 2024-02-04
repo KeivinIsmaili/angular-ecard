@@ -1,25 +1,29 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { LoginComponent } from './login.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CatalogueComponent } from './catalogue.component';
+import { TopHeaderModule } from '../top-header/top-header.module';
+import { HeaderModule } from '../header/header.module';
+import { ContainerModule } from '../container/container.module';
 
 @NgModule({
     declarations: [
-        LoginComponent
+        CatalogueComponent
     ],
     imports: [
         BrowserModule,
         FormsModule,
         CommonModule,
         HttpClientModule,
-        FontAwesomeModule
+        ContainerModule,
+        HeaderModule,
+        TopHeaderModule
     ],
     providers: [],
     exports: [
-        LoginComponent
+        CatalogueComponent
     ]
 })
-export class LoginModule { }
+export class CatalogueModule { }

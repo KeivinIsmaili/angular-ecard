@@ -1,0 +1,21 @@
+* {
+    margin: 0px auto;
+    padding: 0px;
+    text-align: center;
+}
+
+.cont_principal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #2a2469;
+}
+
+.cont_error {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    top: 50%;
+    margin-top: -150px;
+}
