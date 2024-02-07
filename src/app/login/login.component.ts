@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { WS_CONSTANT } from '../utils/constant';
 import { ToastrService } from 'ngx-toastr';
+import { environment } from '../../../environment';
 
 @Component({
   selector: 'login',
@@ -39,12 +40,9 @@ export class LoginComponent {
       this.isPasswordFieldFilled = true;
     }
   }
-
+  
   onLogin() {
-    console.log(this.isPasswordFieldFilled);
-    console.log(this.isUsernameFieldFilled);
-    let path: string = "authenticate/signin";
-    this.httpClient.post(WS_CONSTANT.WS_BASE_URL.concat(path), this.signinRequest).subscribe(
+    this.httpClient.post(environment.WS_BASE_URL.concat(WS_CONSTANT.WS_LOG_IN_URL), this.signinRequest).subscribe(
       (res: any) => {
         this.toastr.success('Login Successful!');
         localStorage.setItem('loginToken', res.accessToken);
