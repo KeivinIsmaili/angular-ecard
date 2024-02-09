@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="screen">
+    <div class="screen__content">
+      <form class="signup">
+        <div class="signup__field">
+					<fa-icon class="signup__icon" [icon]="faUser"></fa-icon>
+          <input matInput class="signup__input" placeholder="User name" type="text" 
+          [(ngModel)]="signupRequest.username" [ngModelOptions]="{standalone: true}">
+				</div>
+        <div class="signup__field">
+          <fa-icon class="signup__icon" [icon]="faUser"></fa-icon>
+          <input matInput class="signup__input" placeholder="First name" type="text"
+          [(ngModel)]="signupRequest.firstName" [ngModelOptions]="{standalone: true}">
+				</div>
+        <div class="signup__field">
+          <fa-icon class="signup__icon" [icon]="faUser"></fa-icon>
+          <input matInput class="signup__input" placeholder="Last name" type="text"
+          [(ngModel)]="signupRequest.lastName" [ngModelOptions]="{standalone: true}">
+				</div>
+        <div class="signup__field">
+          <fa-icon class="signup__icon" [icon]="faEnvelope"></fa-icon>
+          <input matInput class="signup__input" placeholder="Email" type="text"
+          [(ngModel)]="signupRequest.email" [ngModelOptions]="{standalone: true}" required>
+        </div>
+        <div class="signup__field">
+          <fa-icon class="signup__icon" [icon]="faLock"></fa-icon>
+          <input matInput type="password" class="signup__input" placeholder="Password"
+          [(ngModel)]="signupRequest.password" [ngModelOptions]="{standalone: true}">
+				</div>
+        <button class="button signup__submit" (click)="onSignup()">
+					<span class="button__text">Sign Up Now</span>
+					<fa-icon class="button__icon" [icon]="faArrowRight"></fa-icon>
+				</button>	
+      </form>
+    </div>
+    <div class="screen__background">
+      <span class="screen__background__shape screen__background__shape4"></span>
+      <span class="screen__background__shape screen__background__shape3"></span>
+      <span class="screen__background__shape screen__background__shape2"></span>
+      <span class="screen__background__shape screen__background__shape1"></span>
+    </div>
+  </div>
+</div>

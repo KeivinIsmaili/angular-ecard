@@ -20,26 +20,12 @@ export class LoginComponent {
     username: "",
     password: ""
   }
-  isUsernameFieldFilled: boolean = false;
-  isPasswordFieldFilled: boolean = false;
 
   constructor(
     private httpClient: HttpClient,
     private router: Router,
     private toastr: ToastrService
   ) {}
-
-  onUsernameInputFilled(event){
-    if(event.target.value) {
-      this.isUsernameFieldFilled = true;
-    }
-  }
-
-  onPasswordInputFilled(event){
-    if(event.target.value) {
-      this.isPasswordFieldFilled = true;
-    }
-  }
   
   onLogin() {
     this.httpClient.post(environment.WS_BASE_URL.concat(WS_CONSTANT.WS_LOG_IN_URL), this.signinRequest).subscribe(

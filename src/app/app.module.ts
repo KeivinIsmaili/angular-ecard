@@ -15,6 +15,8 @@ import { ContainerModule } from './container/container.module';
 import { ToastrModule } from 'ngx-toastr';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { CustomInterceptor } from './interceptor/custom.interceptor';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { SignUpModule } from './sign-up/sign-up.module';
 
 @NgModule({
   declarations: [
@@ -34,10 +36,12 @@ import { CustomInterceptor } from './interceptor/custom.interceptor';
     HeaderModule,
     PageNotFoundModule,
     FontAwesomeModule,
-    ContainerModule
+    ContainerModule,
+    SignUpModule
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: CustomInterceptor, multi: true}
+    { provide: HTTP_INTERCEPTORS, useClass: CustomInterceptor, multi: true},
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })
