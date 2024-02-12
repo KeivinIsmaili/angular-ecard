@@ -17,6 +17,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { CustomInterceptor } from './interceptor/custom.interceptor';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { SignUpModule } from './sign-up/sign-up.module';
+import { HomepageModule } from './home-page/home-page.module';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { SignUpModule } from './sign-up/sign-up.module';
     PageNotFoundModule,
     FontAwesomeModule,
     ContainerModule,
-    SignUpModule
+    SignUpModule,
+    HomepageModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: CustomInterceptor, multi: true},

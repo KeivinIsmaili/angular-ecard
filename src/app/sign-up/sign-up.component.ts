@@ -41,7 +41,6 @@ export class SignUpComponent {
           }
           this.httpClient.post(environment.WS_BASE_URL.concat(WS_CONSTANT.WS_LOG_IN_URL), signinRequest).subscribe(
             (res: any) => {
-              this.toastr.success('Login Successful!');
               localStorage.setItem('loginToken', res.accessToken);
               this.router.navigateByUrl('/catalogue');
             },

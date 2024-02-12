@@ -17,8 +17,7 @@ export class ContainerComponent {
     price: 999,
     color: 'Red',
     discount: 8.5,
-    inStock: 5,
-    image: 'assets/images/iphone-13.jpg'
+    inStock: 5
   }
   listOfStrings: string[] = ['Mark', 'Steve', 'Mary', 'John', 'Sarah']
 
