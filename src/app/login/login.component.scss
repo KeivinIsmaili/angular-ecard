@@ -60,7 +60,7 @@
 .screen__background__shape2 {
 	height: 220px;
 	width: 220px;
-	background: #1b4b8d;	
+	background: #2d4059;	
 	top: -172px;
 	right: 0;	
 	border-radius: 32px;
@@ -69,7 +69,7 @@
 .screen__background__shape3 {
 	height: 540px;
 	width: 190px;
-	background: #1b4b8d;
+	background: #2d4059;
 	top: -24px;
 	right: 0;	
 	border-radius: 32px;
@@ -78,7 +78,7 @@
 .screen__background__shape4 {
 	height: 400px;
 	width: 200px;
-	background: #1b4b8d;	
+	background: #2d4059;	
 	top: 420px;
 	right: 50px;	
 	border-radius: 60px;
@@ -98,7 +98,7 @@
 .login__icon {
 	position: absolute;
 	top: 30px;
-	color: #1b4b8d;
+	color: #2d4059;
 }
 
 .login__input {
@@ -116,7 +116,7 @@
 .login__input:focus,
 .login__input:hover {
 	outline: none;
-	border-bottom-color: #1b4b8d;
+	border-bottom-color: #2d4059;
 }
 
 .login__submit {
@@ -131,8 +131,8 @@
 	display: flex;
 	align-items: center;
 	width: 100%;
-	color: #1b4b8d;
-	box-shadow: 0px 2px 2px #1b4b8d;
+	color: #2d4059;
+	box-shadow: 0px 2px 2px #2d4059;
 	cursor: pointer;
 	transition: .2s;
 }
@@ -140,12 +140,12 @@
 .login__submit:active,
 .login__submit:focus,
 .login__submit:hover {
-	border-color: #1b4b8d;
+	border-color: #2d4059;
 	outline: none;
 }
 
 .button__icon {
 	font-size: 24px;
 	margin-left: auto;
-	color: #1b4b8d;
+	color: #2d4059;
 }
