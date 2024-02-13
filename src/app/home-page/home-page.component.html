@@ -1,5 +1,9 @@
-<header>
-    Trendora
+<header class="header">
+    <div style="padding-left:20px; padding-top: 10px;">Trendora</div>
+    <div class="buttons">
+        <button class="btn" (click)="redirectToLogin()">Login</button>
+        <button class="btn" (click)="redirectToSignUp()">Register</button>
+    </div>
 </header>
 
 <div class="container">
@@ -7,15 +11,10 @@
         <img src="../../assets/images/shop.jpg">
     </div>
     <div class="text-section">
-        <h1>Welcome to Our Store</h1>
+        <h1 style="font-size: 40px;font-style: italic;">Welcome to Our Store</h1>
         <p>Find the best items for your everyday needs.</p>
-        <div class="buttons">
-            <button class="btn" (click)="redirectToLogin()">Login</button>
-            <button class="btn" (click)="redirectToSignUp()">Register</button>
-        </div>
-    </div>
+    </div>   
 </div>
-
-<footer>
+<footer class="footer">
     &copy; 2024 Trendora. All rights reserved.
 </footer>
