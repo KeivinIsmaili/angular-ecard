@@ -17,18 +17,24 @@ export class SignUpComponent {
   faEnvelope = faEnvelope;
   faLock = faLock;
   faArrowRight = faArrowRight;
-  value: string = '';
   signupRequest: SignupRequest = {
-    username: "",
+    username: '',
     firstName: '',
     lastName: '',
     email: '',
     password: ''
   };
 
-  constructor(private httpClient: HttpClient,
+  constructor(
+    private httpClient: HttpClient,
     private router: Router,
-    private toastr: ToastrService) { }
+    private toastr: ToastrService
+  ) {}
+
+  
+  isStringValidStrict(str) {
+    return typeof str === 'string' && str !== '';
+  }
 
   onSignup() {
     this.httpClient.post(environment.WS_BASE_URL.concat(WS_CONSTANT.WS_SIGN_UP_URL), this.signupRequest).subscribe(
