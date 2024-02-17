@@ -1,7 +1,14 @@
 .ecard--top--bar {
-    width: auto;
-    text-align: right;
-    padding-top: 3px;
-    padding-bottom: 15px;
-    padding-right: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.ecard-logo {
+    font-size: 40px;
+    font-weight: bold;
+    color: #36454F;
+    font-family: 'Concert One', cursive;
+    width: 20%;
+    padding-left: 10px;
+    padding-top: 20px;
 }

@@ -6,7 +6,6 @@ import { ContainerComponent } from '../container/container.component';
 import { FeaturedBrandsModule } from './featured-brands/featured-brands.module';
 import { ProductDetailModule } from './product-detail/product-detail.module';
 import { ProductListModule } from './product-list/product-list.module';
-import { SearchModule } from './search/search.module';
 
 @NgModule({
     declarations: [
@@ -18,8 +17,7 @@ import { SearchModule } from './search/search.module';
         CommonModule,
         FeaturedBrandsModule,
         ProductDetailModule,
-        ProductListModule,
-        SearchModule
+        ProductListModule
     ],
     exports: [
         ContainerComponent

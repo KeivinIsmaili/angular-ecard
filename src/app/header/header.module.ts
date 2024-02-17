@@ -15,7 +15,7 @@ import { TopMenuModule } from './top-menu/top-menu.module';
         FormsModule,
         CommonModule,
         MainMenuModule,
-        TopMenuModule
+        TopMenuModule,
     ],
     exports: [
         HeaderComponent

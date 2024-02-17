@@ -1,5 +1,4 @@
 <div class="ecard--product--container">
-    <app-search (searchTextChanged)="setSearchText($event)"></app-search>
     <product-list [searchText]="searchText" #productListComponent></product-list>
     <product-detail *ngIf="productListComponent.selectedProduct" [productListComp]="productListComponent">
     </product-detail>

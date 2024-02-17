@@ -8,8 +8,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 
 export const routes: Routes = [
     { path: 'login', component: LoginComponent },
-    { path: 'homepage', component: HomePageComponent},
-    { path: '', redirectTo: 'homepage', pathMatch: 'full'},
+    { path: '', component: HomePageComponent},
+    { path: '', redirectTo: '', pathMatch: 'full'},
     { path: 'signup', component: SignUpComponent },
     { path: 'catalogue', component: CatalogueComponent},
     { path: '**', component: PageNotFoundComponent },

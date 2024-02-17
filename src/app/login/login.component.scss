@@ -92,7 +92,9 @@
 
 .login__field {
 	padding: 20px 0px;	
-	position: relative;	
+	position: relative;
+	display: flex;
+    flex-direction: column;
 }
 
 .login__icon {

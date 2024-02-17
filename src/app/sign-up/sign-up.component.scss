@@ -91,8 +91,10 @@
 }
 
 .signup__field {
-	padding: 20px 0px;	
-	position: relative;	
+	padding-top: 20px;	
+	position: relative;
+	display: flex;
+    flex-direction: column;
 }
 
 .signup__icon {

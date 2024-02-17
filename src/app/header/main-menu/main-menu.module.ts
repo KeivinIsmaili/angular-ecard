@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MainMenuComponent } from './main-menu.component';
+import { MatToolbar } from '@angular/material/toolbar';
+import { MatIcon } from '@angular/material/icon';
 
 @NgModule({
     declarations: [
@@ -11,7 +13,9 @@ import { MainMenuComponent } from './main-menu.component';
     imports: [
         BrowserModule,
         FormsModule,
-        CommonModule
+        CommonModule,
+        MatToolbar,
+        MatIcon
     ],
     exports: [
         MainMenuComponent

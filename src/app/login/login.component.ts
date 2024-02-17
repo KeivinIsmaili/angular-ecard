@@ -1,11 +1,7 @@
 import { Component } from '@angular/core';
 import { faLock, faUser, faArrowRight, } from '@fortawesome/free-solid-svg-icons';
 import { LoginRequest } from '../models/loginRequest';
-import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
-import { WS_CONSTANT } from '../utils/constant';
-import { ToastrService } from 'ngx-toastr';
-import { environment } from '../../../environment';
+import { LoginService } from './service/login.service';
 
 @Component({
   selector: 'login',
@@ -16,27 +12,19 @@ export class LoginComponent {
   faUser = faUser;
   faLock = faLock;
   faArrowRight = faArrowRight;
+  areFieldsValid: boolean = false;
   signinRequest: LoginRequest = {
     username: "",
     password: ""
   }
 
-  constructor(
-    private httpClient: HttpClient,
-    private router: Router,
-    private toastr: ToastrService
-  ) {}
-  
+  constructor(private loginService: LoginService) { }
+
   onLogin() {
-    this.httpClient.post(environment.WS_BASE_URL.concat(WS_CONSTANT.WS_LOG_IN_URL), this.signinRequest).subscribe(
-      (res: any) => {
-        this.toastr.success('Login Successful!');
-        localStorage.setItem('loginToken', res.accessToken);
-        this.router.navigateByUrl('/catalogue');
-      },
-      (error) => {
-        this.toastr.error('Bad credentials!');
-      }
-    )
+    this.areFieldsValid = this.loginService.checkConditions(this.signinRequest);
+    if (this.areFieldsValid) {
+      this.loginService.onLogIn(this.signinRequest);
+    }
   }
+
 }
