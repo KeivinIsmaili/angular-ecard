@@ -1,14 +1,22 @@
 .ecard--top--bar {
     display: flex;
     flex-direction: row;
+    background-color: black;
 }
 
-.ecard-logo {
-    font-size: 40px;
-    font-weight: bold;
-    color: #36454F;
-    font-family: 'Concert One', cursive;
-    width: 20%;
-    padding-left: 10px;
-    padding-top: 20px;
+.btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #2d4059;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin: 2px;
+    font-size: 30px;
+    min-width: 200px;
+}
+
+.btn:hover {
+    background-color: #3b50b2;
 }

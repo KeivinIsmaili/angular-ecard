@@ -17,23 +17,23 @@ export class LoginService {
         private toastr: ToastrService,
         private validator: Validator,
         private router: Router
-    ) {}
+    ) { }
 
     validate(username: string) {
         return this.validator.isStringValidStrict(username);
     }
 
     onLogIn(loginRequest: LoginRequest) {
-        this.httpClient.post(environment.WS_BASE_URL.concat(WS_CONSTANT.WS_LOG_IN_URL), loginRequest).subscribe(
-            (res: any) => {
+        this.httpClient.post(environment.WS_BASE_URL.concat(WS_CONSTANT.WS_LOG_IN_URL), loginRequest).subscribe({
+            next: (res: any) => {
                 this.toastr.success('Login Successful!');
                 localStorage.setItem('loginToken', res.accessToken);
                 this.router.navigateByUrl('/catalogue');
             },
-            (error) => {
+            error: (error) => {
                 this.toastr.error('Bad credentials!');
             }
-        )
+        })
     }
 
 }

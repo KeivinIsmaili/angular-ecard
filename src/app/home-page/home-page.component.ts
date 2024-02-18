@@ -18,4 +18,8 @@ export class HomePageComponent {
     this.router.navigateByUrl('/login');
   }
 
+  redirectToCatalogue() {
+    this.router.navigateByUrl('/catalogue');
+  }
+
 }

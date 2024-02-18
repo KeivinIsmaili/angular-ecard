@@ -28,8 +28,8 @@ export class SignupService {
     }
 
     onSignUp(signupRequest: SignupRequest) {
-        this.httpClient.post(environment.WS_BASE_URL.concat(WS_CONSTANT.WS_SIGN_UP_URL), signupRequest).subscribe(
-            (res: any) => {
+        this.httpClient.post(environment.WS_BASE_URL.concat(WS_CONSTANT.WS_SIGN_UP_URL), signupRequest).subscribe({
+            next: (res: any) => {
                 if (res) {
                     this.toastr.success('Sign Up Successful!');
                     let signinRequest = {
@@ -43,8 +43,11 @@ export class SignupService {
                         },
                     )
                 }
+            },
+            error: (error) => {
+                this.toastr.error(error.error.message);
             }
-        )
+        })
     }
 
 }

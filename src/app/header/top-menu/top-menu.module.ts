@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TopMenuComponent } from './top-menu.component';
 import { SearchModule } from './search/search.module';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
     declarations: [
@@ -13,7 +14,8 @@ import { SearchModule } from './search/search.module';
         BrowserModule,
         FormsModule,
         CommonModule,
-        SearchModule
+        SearchModule,
+        MatIconModule
     ],
     exports: [
         TopMenuComponent
