@@ -19,15 +19,8 @@ export class LoginService {
         private router: Router
     ) {}
 
-    checkConditions(loginRequest: LoginRequest) {
-        const { username, password } = loginRequest;
-
-        const isAllValid = (
-            this.validator.isStringValidStrict(username) &&
-            this.validator.isStringValidStrict(password)
-        );
-
-        return isAllValid;
+    validate(username: string) {
+        return this.validator.isStringValidStrict(username);
     }
 
     onLogIn(loginRequest: LoginRequest) {

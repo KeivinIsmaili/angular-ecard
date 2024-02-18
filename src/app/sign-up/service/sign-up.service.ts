@@ -19,18 +19,12 @@ export class SignupService {
         private router: Router
     ) {}
 
-    checkConditions(signupRequest: SignupRequest) {
-        const { username, firstName, lastName, email, password } = signupRequest;
-
-        const isAllValid = (
-            this.validator.isStringValidStrict(username) &&
-            this.validator.isStringValidStrict(firstName) &&
-            this.validator.isStringValidStrict(lastName) &&
-            this.validator.isValidEmail(email) &&
-            this.validator.isStringValidStrict(password)
-        );
-
-        return isAllValid;
+    validate(username: string) {
+        return this.validator.isStringValidStrict(username);
+    }
+    
+    validateEmail(email: string) {
+        return this.validator.isValidEmail(email);
     }
 
     onSignUp(signupRequest: SignupRequest) {

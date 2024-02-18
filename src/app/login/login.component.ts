@@ -13,6 +13,8 @@ export class LoginComponent {
   faLock = faLock;
   faArrowRight = faArrowRight;
   areFieldsValid: boolean = false;
+  usernameValidator: boolean;
+  passwordValidator: boolean;
   signinRequest: LoginRequest = {
     username: "",
     password: ""
@@ -21,8 +23,10 @@ export class LoginComponent {
   constructor(private loginService: LoginService) { }
 
   onLogin() {
-    this.areFieldsValid = this.loginService.checkConditions(this.signinRequest);
-    if (this.areFieldsValid) {
+    this.usernameValidator = this.loginService.validate(this.signinRequest.username);
+    this.passwordValidator = this.loginService.validate(this.signinRequest.password);
+
+    if (this.usernameValidator && this.passwordValidator) {
       this.loginService.onLogIn(this.signinRequest);
     }
   }

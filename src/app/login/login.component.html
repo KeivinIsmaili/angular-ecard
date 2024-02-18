@@ -6,13 +6,13 @@
 					<fa-icon class="login__icon" [icon]="faUser"></fa-icon>
 					<input type="text" class="login__input" placeholder="User name"
 					[(ngModel)]="signinRequest.username" [ngModelOptions]="{standalone: true}">
-					<span *ngIf="!signinRequest.username" style="color: red;">This field is required!</span>
+					<span *ngIf="usernameValidator === false" style="color: red;">This field is required!</span>
 				</div>
 				<div class="login__field">
 					<fa-icon class="login__icon" [icon]="faLock"></fa-icon>
 					<input type="password" class="login__input" placeholder="Password"
 					[(ngModel)]="signinRequest.password" [ngModelOptions]="{standalone: true}">
-					<span *ngIf="!signinRequest.password" style="color: red;">This field is required!</span>
+					<span *ngIf="passwordValidator === false" style="color: red;">This field is required!</span>
 				</div>
 				<button type="submit" class="button login__submit" (click)="onLogin()">
 					<span class="button__text">Log In Now</span>
