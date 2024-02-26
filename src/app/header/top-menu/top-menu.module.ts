@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TopMenuComponent } from './top-menu.component';
 import { SearchModule } from './search/search.module';
-import {MatIconModule} from '@angular/material/icon';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
     declarations: [
@@ -15,7 +15,7 @@ import {MatIconModule} from '@angular/material/icon';
         FormsModule,
         CommonModule,
         SearchModule,
-        MatIconModule
+        FontAwesomeModule
     ],
     exports: [
         TopMenuComponent

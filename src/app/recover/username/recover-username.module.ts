@@ -5,12 +5,11 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ToastrModule } from 'ngx-toastr';
-import { SignUpComponent } from './sign-up.component';
-import { InputTextModule } from 'primeng/inputtext';
+import { RecoverUsernameComponent } from './recover-username.component';
 
 @NgModule({
     declarations: [
-        SignUpComponent
+        RecoverUsernameComponent
     ],
     imports: [
         BrowserModule,
@@ -18,12 +17,11 @@ import { InputTextModule } from 'primeng/inputtext';
         CommonModule,
         HttpClientModule,
         FontAwesomeModule,
-        ToastrModule,
-        InputTextModule
+        ToastrModule
     ],
     providers: [],
     exports: [
-        SignUpComponent
+        RecoverUsernameComponent
     ]
 })
-export class SignUpModule { }
+export class RecoverUsernameModule { }

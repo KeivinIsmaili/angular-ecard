@@ -1,4 +1,5 @@
 export class WS_CONSTANT {
-    public static readonly WS_LOG_IN_URL = 'authenticate/signin';
-    public static readonly WS_SIGN_UP_URL = 'authenticate/signup';
+    public static readonly WS_LOG_IN_END_POINT = 'authenticate/signin';
+    public static readonly WS_SIGN_UP_END_POINT = 'authenticate/signup';
+    public static readonly WS_FORGOT_USERNAME_END_POINT = 'recover/forgotUsername';
 }

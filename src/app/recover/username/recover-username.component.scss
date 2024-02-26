@@ -13,7 +13,7 @@
 	min-height: 100vh;
     overflow: hidden;
 	background-color: #1b1919;
-	background-image: url(../../assets/images/main-page-background.png);
+	background-image: url(../../../assets/images/main-page-background.png);
 	background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -84,26 +84,26 @@
 	border-radius: 60px;
 }
 
-.login {
+.recover_username {
 	width: 320px;
 	padding: 30px;
-	padding-top: 100px;
+	padding-top: 180px;
 }
 
-.login__field {
+.recover_username__field {
 	padding: 20px 0px;	
 	position: relative;
 	display: flex;
     flex-direction: column;
 }
 
-.login__icon {
+.recover_username__icon {
 	position: absolute;
 	top: 30px;
 	color: #2d4059;
 }
 
-.login__input {
+.recover_username__input {
 	border: none;
 	border-bottom: 2px solid #D1D1D4;
 	background: none;
@@ -114,14 +114,14 @@
 	transition: .2s;
 }
 
-.login__input:active,
-.login__input:focus,
-.login__input:hover {
+.recover_username__input:active,
+.recover_username__input:focus,
+.recover_username__input:hover {
 	outline: none;
 	border-bottom-color: #2d4059;
 }
 
-.login__submit {
+.recover_username__submit {
 	background: #fff;
 	font-size: 14px;
 	margin-top: 30px;
@@ -139,9 +139,9 @@
 	transition: .2s;
 }
 
-.login__submit:active,
-.login__submit:focus,
-.login__submit:hover {
+.recover_username__submit:active,
+.recover_username__submit:focus,
+.recover_username__submit:hover {
 	border-color: #2d4059;
 	outline: none;
 }

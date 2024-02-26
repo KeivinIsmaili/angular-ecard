@@ -1,0 +1,26 @@
+<div class="container">
+	<div class="screen">
+		<div class="screen__content">
+			<form class="recover_username">
+				<div ><b>Recover your username</b></div>
+				<div>Tell us the email address associated with your Trendora account, and we’ll send you an email with your username.</div>
+				<div class="recover_username__field">
+					<fa-icon class="recover_username__icon" [icon]="faEnvelope"></fa-icon>
+					<input type="text" class="recover_username__input" placeholder="Email"
+					[(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+					<span *ngIf="emailValidator === false" style="color: red;">Not a valid email!</span>
+				</div>
+				<button type="submit" class="button recover_username__submit" (click)="onEmailSubmit()">
+					<span class="button__text">Email Me</span>
+					<fa-icon class="button__icon" [icon]="faArrowRight"></fa-icon>
+				</button>				
+			</form>
+		</div>
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>		
+	</div>
+</div>

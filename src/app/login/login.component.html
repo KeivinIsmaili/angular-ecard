@@ -14,6 +14,12 @@
 					[(ngModel)]="signinRequest.password" [ngModelOptions]="{standalone: true}">
 					<span *ngIf="passwordValidator === false" style="color: red;">This field is required!</span>
 				</div>
+				<div class="login__field">
+					<span>Forgot your 
+						<a class="btn" href="/username">username</a> or 
+						<a class="btn" href="/password">password?</a> 
+					</span>
+				</div>
 				<button type="submit" class="button login__submit" (click)="onLogin()">
 					<span class="button__text">Log In Now</span>
 					<fa-icon class="button__icon" [icon]="faArrowRight"></fa-icon>

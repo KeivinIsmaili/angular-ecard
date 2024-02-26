@@ -4,31 +4,31 @@
       <form class="signup">
         <div class="signup__field">
           <fa-icon class="signup__icon" [icon]="faUser"></fa-icon>
-          <input #usernameInput matInput class="signup__input" placeholder="User name" type="text"
+          <input class="signup__input" placeholder="User name" type="text"
             [(ngModel)]="signupRequest.username" [ngModelOptions]="{standalone: true}">
           <span *ngIf="usernameValidator === false" style="color: red;">This field is required!</span>
         </div>
         <div class="signup__field">
           <fa-icon class="signup__icon" [icon]="faUser"></fa-icon>
-          <input matInput class="signup__input" placeholder="First name" type="text"
+          <input class="signup__input" placeholder="First name" type="text"
             [(ngModel)]="signupRequest.firstName" [ngModelOptions]="{standalone: true}">
           <span *ngIf="firstNameValidator === false" style="color: red;">This field is required!</span>
         </div>
         <div class="signup__field">
           <fa-icon class="signup__icon" [icon]="faUser"></fa-icon>
-          <input matInput class="signup__input" placeholder="Last name" type="text" [(ngModel)]="signupRequest.lastName"
+          <input class="signup__input" placeholder="Last name" type="text" [(ngModel)]="signupRequest.lastName"
             [ngModelOptions]="{standalone: true}">
           <span *ngIf="lastNameValidator === false" style="color: red;">This field is required!</span>
         </div>
         <div class="signup__field">
           <fa-icon class="signup__icon" [icon]="faEnvelope"></fa-icon>
-          <input matInput class="signup__input" placeholder="Email" type="text" [(ngModel)]="signupRequest.email"
+          <input class="signup__input" placeholder="Email" type="text" [(ngModel)]="signupRequest.email"
             [ngModelOptions]="{standalone: true}">
             <span *ngIf="emailValidator === false" style="color: red;">Not a valid email!</span>
         </div>
         <div class="signup__field">
           <fa-icon class="signup__icon" [icon]="faLock"></fa-icon>
-          <input matInput type="password" class="signup__input" placeholder="Password"
+          <input type="password" class="signup__input" placeholder="Password"
             [(ngModel)]="signupRequest.password" [ngModelOptions]="{standalone: true}">
             <span *ngIf="passwordValidator === false" style="color: red;">This field is required!</span>
         </div>

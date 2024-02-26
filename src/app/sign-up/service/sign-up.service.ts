@@ -28,7 +28,7 @@ export class SignupService {
     }
 
     onSignUp(signupRequest: SignupRequest) {
-        this.httpClient.post(environment.WS_BASE_URL.concat(WS_CONSTANT.WS_SIGN_UP_URL), signupRequest).subscribe({
+        this.httpClient.post(environment.WS_BASE_URL.concat(WS_CONSTANT.WS_SIGN_UP_END_POINT), signupRequest).subscribe({
             next: (res: any) => {
                 if (res) {
                     this.toastr.success('Sign Up Successful!');
@@ -36,7 +36,7 @@ export class SignupService {
                         username: signupRequest?.username,
                         password: signupRequest?.password
                     }
-                    this.httpClient.post(environment.WS_BASE_URL.concat(WS_CONSTANT.WS_LOG_IN_URL), signinRequest).subscribe(
+                    this.httpClient.post(environment.WS_BASE_URL.concat(WS_CONSTANT.WS_LOG_IN_END_POINT), signinRequest).subscribe(
                         (res: any) => {
                             localStorage.setItem('loginToken', res.accessToken);
                             this.router.navigateByUrl('/catalogue');

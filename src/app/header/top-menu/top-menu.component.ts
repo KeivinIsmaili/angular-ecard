@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'top-menu',
@@ -7,6 +8,8 @@ import { Router } from '@angular/router';
   styleUrl: './top-menu.component.scss'
 })
 export class TopMenuComponent {
+
+  faHome = faHome;
 
   constructor(private router: Router) {}
 
