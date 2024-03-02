@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { faEnvelope, faArrowRight, } from '@fortawesome/free-solid-svg-icons';
-import { LoginRequest } from '../../models/loginRequest';
-import { LoginService } from '../../login/service/login.service';
+import { faEnvelope, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { RecoverService } from '../service/recover.service';
 
 @Component({
@@ -17,11 +15,11 @@ export class RecoverUsernameComponent {
 
   constructor(private recoverService: RecoverService) {}
 
-  onEmailSubmit() {
+  recoverUsername() {
     this.emailValidator = this.recoverService.validateMail(this.email);
 
     if (this.emailValidator) {
-      this.recoverService.onEmailSubmit(this.email);
+      this.recoverService.recoverUsername(this.email);
     }
   }
 }

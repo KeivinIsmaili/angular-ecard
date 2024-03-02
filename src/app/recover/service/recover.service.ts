@@ -19,11 +19,15 @@ export class RecoverService {
         private router: Router,
     ) {}
 
+    validateUsername(username: string) {
+        return this.validator.isStringValidStrict(username);
+    }
+
     validateMail(email: string) {
         return this.validator.isValidEmail(email);
     }
 
-    onEmailSubmit(emailTo: string) {
+    recoverUsername(emailTo: string) {
         let params = new HttpParams().set('emailTo', emailTo);
         this.httpClient.post(environment.WS_BASE_URL.concat(WS_CONSTANT.WS_FORGOT_USERNAME_END_POINT), null,  {params: params}).subscribe({
             next: (res: any) => {
@@ -35,5 +39,21 @@ export class RecoverService {
             }
         })
     }
+
+    recoverPassword(username:string, emailTo: string) {
+        let params = new HttpParams()
+        .set('username', username)
+        .set('emailTo', emailTo);
+        this.httpClient.post(environment.WS_BASE_URL.concat(WS_CONSTANT.WS_FORGOT_PASSWORD_END_POINT), null,  {params: params}).subscribe({
+            next: (res: any) => {
+                this.toastr.success(res.message);
+                this.router.navigateByUrl('/login');
+            },
+            error: (error) => {
+                this.toastr.error(error?.error?.message);
+            }
+        })
+    }
+
 
 }

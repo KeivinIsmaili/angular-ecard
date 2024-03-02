@@ -17,7 +17,7 @@ export class LoginService {
         private toastr: ToastrService,
         private validator: Validator,
         private router: Router
-    ) { }
+    ) {}
 
     validate(username: string) {
         return this.validator.isStringValidStrict(username);
@@ -25,13 +25,13 @@ export class LoginService {
 
     onLogIn(loginRequest: LoginRequest) {
         this.httpClient.post(environment.WS_BASE_URL.concat(WS_CONSTANT.WS_LOG_IN_END_POINT), loginRequest).subscribe({
-            next: (res: any) => {
+            next: (response: any) => {
                 this.toastr.success('Login Successful!');
-                localStorage.setItem('loginToken', res.accessToken);
+                localStorage.setItem('loginToken', response.accessToken);
                 this.router.navigateByUrl('/catalogue');
             },
-            error: (error) => {
-                this.toastr.error('Bad credentials!');
+            error: (response) => {
+                this.toastr.error(response.error.error);
             }
         })
     }
