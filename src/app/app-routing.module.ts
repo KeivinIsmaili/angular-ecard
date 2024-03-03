@@ -7,12 +7,14 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { RecoverUsernameComponent } from './recover/username/recover-username.component';
 import { RecoverPasswordComponent } from './recover/password/recover-password.component';
+import { ResetPasswordComponent } from './recover/reset-password/reset-password.component';
 
 export const routes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'signup', component: SignUpComponent },
     { path: 'username', component: RecoverUsernameComponent },
     { path: 'password', component: RecoverPasswordComponent },
+    { path: 'reset-password', component: ResetPasswordComponent },
     { path: 'catalogue', component: CatalogueComponent},
     { path: '', component: HomePageComponent},
     { path: '**', component: PageNotFoundComponent }

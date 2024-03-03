@@ -19,6 +19,7 @@ import { SignUpModule } from './sign-up/sign-up.module';
 import { HomepageModule } from './home-page/home-page.module';
 import { RecoverPasswordModule } from './recover/password/recover-password.module';
 import { RecoverUsernameModule } from './recover/username/recover-username.module';
+import { ResetPasswordModule } from './recover/reset-password/reset-password.module';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { RecoverUsernameModule } from './recover/username/recover-username.modul
     SignUpModule,
     HomepageModule,
     RecoverPasswordModule,
-    RecoverUsernameModule
+    RecoverUsernameModule,
+    ResetPasswordModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: CustomInterceptor, multi: true},
