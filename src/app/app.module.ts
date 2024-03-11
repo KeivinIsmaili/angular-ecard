@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
@@ -20,6 +20,7 @@ import { HomepageModule } from './home-page/home-page.module';
 import { RecoverPasswordModule } from './recover/password/recover-password.module';
 import { RecoverUsernameModule } from './recover/username/recover-username.module';
 import { ResetPasswordModule } from './recover/reset-password/reset-password.module';
+import { PrimeNGConfig } from 'primeng/api';
 
 @NgModule({
   declarations: [

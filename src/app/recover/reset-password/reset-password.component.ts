@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './reset-password.component.scss'
 })
 export class ResetPasswordComponent implements OnInit {
-  
+
   faLock = faLock;
   faArrowRight = faArrowRight;
   newPassword: string = '';
@@ -18,15 +18,17 @@ export class ResetPasswordComponent implements OnInit {
   confirmPasswordValidator: boolean;
   passwordsMatch: boolean;
   token: string;
+  username: string;
 
   constructor(
     private resetPasswordService: ResetPasswordService,
     private route: ActivatedRoute
-  ){}
+  ) { }
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       this.token = params['token'];
+      this.username = params['username'];
     });
   }
 
@@ -34,8 +36,8 @@ export class ResetPasswordComponent implements OnInit {
     this.newPasswordValidator = this.resetPasswordService.validatePassword(this.newPassword);
     this.confirmPasswordValidator = this.resetPasswordService.validatePassword(this.confirmPassword);
     this.passwordsMatch = this.resetPasswordService.passwordsMatch(this.newPassword, this.confirmPassword);
-    if(this.passwordsMatch) {
-      this.resetPasswordService.changePassword(this.newPassword, this.token);
+    if (this.passwordsMatch) {
+      this.resetPasswordService.changePassword(this.newPassword, this.token, this.username);
     } else {
       this.resetPasswordService.passwordsDontMatch();
     }

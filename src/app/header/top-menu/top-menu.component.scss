@@ -1,22 +1,13 @@
 .ecard--top--bar {
     display: flex;
     flex-direction: row;
-    background-color: black;
+    justify-content: space-between;
+    background-color: #272829;
 }
 
-.btn {
-    padding: 10px 20px;
-    cursor: pointer;
-    background-color: #2d4059;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    margin: 2px;
-    font-size: 30px;
-    min-width: 200px;
-}
-
-.btn:hover {
-    background-color: #3b50b2;
+.btn{
+    width: 100px;
+    max-height: 5.5vh;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

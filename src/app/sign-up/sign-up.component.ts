@@ -28,7 +28,7 @@ export class SignUpComponent {
     password: ''
   };
 
-  constructor( private signUpService: SignupService ) {}
+  constructor(private signUpService: SignupService) { }
 
   onSignup() {
     this.usernameValidator = this.signUpService.validate(this.signupRequest.username);
@@ -37,7 +37,7 @@ export class SignUpComponent {
     this.passwordValidator = this.signUpService.validate(this.signupRequest.password);
     this.emailValidator = this.signUpService.validateEmail(this.signupRequest.email);
 
-    if(this.usernameValidator && this.firstNameValidator && this.lastNameValidator &&
+    if (this.usernameValidator && this.firstNameValidator && this.lastNameValidator &&
       this.passwordValidator && this.emailValidator) {
       this.signUpService.onSignUp(this.signupRequest);
     }

@@ -5,6 +5,9 @@ import { FormsModule } from '@angular/forms';
 import { TopMenuComponent } from './top-menu.component';
 import { SearchModule } from './search/search.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { BadgeModule } from 'primeng/badge';
+import { ButtonModule } from 'primeng/button';
+import { SplitButtonModule } from 'primeng/splitbutton';
 
 @NgModule({
     declarations: [
@@ -15,7 +18,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
         FormsModule,
         CommonModule,
         SearchModule,
-        FontAwesomeModule
+        FontAwesomeModule,
+        ButtonModule,
+        BadgeModule,
+        SplitButtonModule
     ],
     exports: [
         TopMenuComponent

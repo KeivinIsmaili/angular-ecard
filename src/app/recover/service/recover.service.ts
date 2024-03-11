@@ -47,7 +47,6 @@ export class RecoverService {
         this.httpClient.post(environment.WS_BASE_URL.concat(WS_CONSTANT.WS_FORGOT_PASSWORD_END_POINT), null,  {params: params}).subscribe({
             next: (res: any) => {
                 this.toastr.success(res.message);
-                this.router.navigateByUrl('/login');
             },
             error: (error) => {
                 this.toastr.error(error?.error?.message);

@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { SearchComponent } from './search.component';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
     declarations: [
@@ -11,7 +12,8 @@ import { SearchComponent } from './search.component';
     imports: [
         BrowserModule,
         FormsModule,
-        CommonModule
+        CommonModule,
+        ButtonModule
     ],
     exports: [
         SearchComponent
