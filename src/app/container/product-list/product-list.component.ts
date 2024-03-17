@@ -22,17 +22,10 @@ export class ProductListComponent {
     { id: 12, name: "CD DiorSnow White Reveal UV Shield Foundation 012-Porcelain", description: "Trisomy 18, unspecified", brand: "Diurex", gender: "Female", category: "Framing (Wood)", size: 10, color: "Puce", price: 26, is_in_inventory: false, items_left: 10, image_url: "https://assets.adidas.com/images/w_1366,h_1366,f_auto,q_auto,fl_lossy,c_fill,g_auto/743ba16e96604f23bbb0af1e00e38fce_9366/NMD_R1_Shoes_Grey_FZ5708_01_standard.jpg" }
   ]
 
-  totalCount = this.products.length;
-  totalProductsInStock = this.products.filter( p => p.is_in_inventory === true).length;
-  totalProductsOutOfStock = this.products.filter( p => p.is_in_inventory === false).length;
-
   selectedFilterRadioButton: string = 'all';
 
   @Input() searchText: string = '';
 
   selectedProduct: Product;
 
-  onFilterChanged(event: string) {
-    this.selectedFilterRadioButton = event;
-  }
 }
