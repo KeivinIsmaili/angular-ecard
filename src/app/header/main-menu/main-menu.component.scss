@@ -1,0 +1,15 @@
+:host::ng-deep {
+
+    .button {
+        background: #2d4059;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        margin-right: 5px;
+    }
+
+    .button:hover {
+        background: #3b50b2;
+    }
+
+}

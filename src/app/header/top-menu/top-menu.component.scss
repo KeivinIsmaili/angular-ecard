@@ -1,13 +1,19 @@
-.ecard--top--bar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: #272829;
-}
+:host::ng-deep {
 
-.btn{
-    width: 100px;
-    max-height: 5.5vh;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    .button {
+        background:#2d4059;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .button:hover {
+        background: #3b50b2;
+    }
+    
+    .custom-toolbar {
+        background-color: black;
+        border-radius: 0px;
+        border-color: black;
+    }
 }

@@ -1,20 +1,27 @@
-<div class="ecard--product--item">
-    <div class="ecard--wishlist--sale--container">
-        <div class="ecard--add--to--wishlist">
-            <i class="fa fa-heart-o" aria-hidden="true"></i>
+<p-card header={{product.price}} subheader={{product.price}} [style]="{ width: '300px' }">
+    <ng-template pTemplate="header">
+        <img alt="Card" src={{product.image_url}} />
+    </ng-template>
+    <p class="ecard--product--card--name--description">
+        {{product.name}} . {{product.description}}
+    </p>
+    <p>
+        {{product.gender}}
+    </p>
+    <p class="ecard--product--card--category">
+        {{product.category}}
+    </p>
+    <p style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+        {{product.brand}}
+    </p>
+    <p>
+        <p-rating [(ngModel)]="product.rating"></p-rating>
+    </p>
+    <ng-template pTemplate="footer">
+        <div>
+            {{product.is_in_inventory ? 'Available in stock': 'Not available in stock'}}
         </div>
-        <div class="ecard--on--sale--tag" *ngIf="product.price">75% OFF</div>
-    </div>
-    <div class="ecard--product--image">
-        <img src={{product.image_url}} class="ecard--product--image">
-    </div>
-    <div class="ecard--add-to--price">
-        {{product.price}}
-    </div>
-    <div class="ecard--product--name"> {{product.name}}</div>
-    <div class="ecard--product--category">{{product.gender}} . {{product.category}} . {{product.brand}}</div>
-    <div class="ecard--product--available-colors">{{product.color}} Colors . Best Sellers</div>
-    <div class="ecard--product--in--stock" [ngStyle]="{fontWeight: 'bold', color: product.is_in_inventory ? 'Green' : 'Red' }">
-        {{product.is_in_inventory ? 'Available in stock': 'Not available in stock'}}
-    </div>
-</div>
+        <p-button label="Save" icon="pi pi-check"></p-button>
+        <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{ 'margin-left': '.5em' }"></p-button>
+    </ng-template>
+</p-card>

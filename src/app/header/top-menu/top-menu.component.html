@@ -1,9 +1,38 @@
-<div class="ecard--top--bar">
-    <p-button class="p-ripple p-element p-button p-component p-button-icon-only btn" icon="pi pi-home" 
-    (onClick)="redirectToCatalogue()"></p-button>
-    <app-search></app-search>
-    <a href="#" style="color: white;max-width: 100px;margin-top: 20px;">Language</a>
-    <a href="#" style="color: white; max-width: 100px;margin-top: 10px;">Order Tracker</a>
-    <a href="#" style="color: white;max-width: 100px;margin-top: 10px;">SignUp / Login</a>
-    <p-button class="p-ripple p-element p-button p-component p-button-icon-only btn" icon="pi pi-shopping-cart" badge="8" badgeClass="p-badge-danger"></p-button>
+<div class=".custom-toolbar" >
+    <p-toolbar styleClass="custom-toolbar">
+        <div class="p-toolbar-group-start">
+            <span style="margin-right: 5px;">
+                <p-button styleClass="button" icon="pi pi-home" (onClick)="redirectToCatalogue()">
+                </p-button>
+            </span>
+            <span>
+                <p-button styleClass="button" label="Address"></p-button>
+            </span>
+        </div>
+        <div class="p-toolbar-group-center">
+            <span class="p-input-icon-left">
+                <i class="pi pi-search"></i>
+                <input pInputText style="width: 400px; height:43px" placeholder="Search" />
+                <p-button styleClass="button" (onClick)="updateSearchText()" label="Search"></p-button>
+            </span>
+        </div>
+        <div class="p-toolbar-group-end">
+            <span style="margin-right: 5px;">
+                <a href="#" style="color: white">Language</a>
+            </span>
+            <span style="margin-right: 5px;">
+                <a href="#" style="color: white">Order Tracker</a>
+            </span>
+            <span style="margin-right: 5px;">
+                <p-button styleClass="button" label="Hello, sign in" (onClick)="redirectToCatalogue()">
+                </p-button>
+                <p-menu #menu [model]="items" [popup]="true"></p-menu>
+                <p-button styleClass="button" (click)="menu.toggle($event)" icon="pi pi-chevron-down" label="Account & Lists"></p-button>
+            </span>
+            <span>
+                <p-button styleClass="button" icon="pi pi-shopping-cart" badge="8"
+                    badgeClass="p-badge-danger"></p-button>
+            </span>
+        </div>
+    </p-toolbar>
 </div>

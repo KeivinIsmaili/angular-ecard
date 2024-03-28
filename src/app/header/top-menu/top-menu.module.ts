@@ -9,6 +9,7 @@ import { ButtonModule } from 'primeng/button';
 import { SplitButtonModule } from 'primeng/splitbutton';
 import { ToolbarModule } from 'primeng/toolbar';
 import { InputTextModule } from 'primeng/inputtext';
+import { MenuModule } from 'primeng/menu';
 
 @NgModule({
     declarations: [
@@ -23,7 +24,8 @@ import { InputTextModule } from 'primeng/inputtext';
         BadgeModule,
         SplitButtonModule,
         ToolbarModule,
-        InputTextModule
+        InputTextModule,
+        MenuModule
     ],
     exports: [
         TopMenuComponent

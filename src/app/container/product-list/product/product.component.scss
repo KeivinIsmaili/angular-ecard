@@ -1,67 +1,15 @@
-.ecard--wishlist--sale--container{
-    display: inline-block;
-    width: 270px;
-    position: absolute;
-    padding: 5px 0px;
+.ecard--product--card--name--description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.ecard--product--item{
-   width:290px;
-   background-color: white;
-   margin: 10px 10px;
-   padding-top: 10px;
-   padding-bottom: 20px;
-   padding-left: 10px;
-   padding-right: 10px;
-   border: white 2px solid;
-}
-
-.ecard--add--to--wishlist{
-    position: absolute;
-    font-size: 22px;
-    text-align: right;
-    padding: 2px 10px;
-}
-
-.ecard--product--image{
-    width: 265px;
-    height: 250px;
-}
-
-.ecard--on--sale--tag{
-    float: right;
-    font-size: 14px;
-    margin-top: 10px;
-    margin-right: -10px;
-    padding: 5px 10px;
-    background-color: yellow;
-    color:black;
-    font-weight: bold;
-}
-
-.ecard--product--name{
-    font-size: 14px;
-    color: black;
-    margin-top: 7px;
-    font-weight: bold;
-}
-
-.ecard--add--to--price{
-    padding: 1px 5px;
-    position: absolute;
-    margin-top: -25px;
-    background-color: black;
-    color: white;
-}
-
-.ecard--product--category,
-.ecard--product--available-colors {
-    font-size: 12px;
-    color: grey;
-    margin-top: 7px;
-}
-
-.ecard--product--in--stock{
-    font-size: 14px;
-    margin-top: 10px;
+.ecard--product--card--category {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

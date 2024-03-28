@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MainMenuComponent } from './main-menu.component';
+import { ButtonModule } from 'primeng/button';
+import { SidebarModule } from 'primeng/sidebar';
+import { TabMenuModule } from 'primeng/tabmenu';
 
 @NgModule({
     declarations: [
@@ -11,7 +14,10 @@ import { MainMenuComponent } from './main-menu.component';
     imports: [
         BrowserModule,
         FormsModule,
-        CommonModule
+        CommonModule,
+        SidebarModule,
+        ButtonModule,
+        TabMenuModule
     ],
     exports: [
         MainMenuComponent

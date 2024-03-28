@@ -9,7 +9,7 @@ export class Product {
     size: number;
     color: string;
     price: number;
-    //? makes our property optional
+    rating: number;
     discountPrice?: number;
     is_in_inventory: boolean;
     items_left: number;

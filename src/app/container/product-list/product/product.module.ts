@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { ProductComponent } from './product.component';
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
+import { RatingModule } from 'primeng/rating';
 
 @NgModule({
     declarations: [
@@ -15,7 +16,8 @@ import { ButtonModule } from 'primeng/button';
         FormsModule,
         CommonModule,
         CardModule,
-        ButtonModule
+        ButtonModule,
+        RatingModule
     ],
     exports: [
         ProductComponent
