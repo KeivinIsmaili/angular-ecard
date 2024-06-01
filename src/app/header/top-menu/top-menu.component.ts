@@ -1,7 +1,6 @@
 import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
-import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'top-menu',
@@ -12,22 +11,12 @@ export class TopMenuComponent implements OnInit {
 
   faHome = faHome;
   
-  items: MenuItem[] | undefined;
+  items: undefined;
 
   constructor(private router: Router) {}
 
   ngOnInit() {
-    this.items = [
-      {
-        label: 'Update',
-        icon: 'pi pi-refresh',
-        styleClass: "split-button"
-      },
-      {
-        label: 'Delete',
-        icon: 'pi pi-times'
-      }
-    ];
+    
   }
 
   redirectToCatalogue() {

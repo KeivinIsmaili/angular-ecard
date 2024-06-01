@@ -3,11 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-ecard": {
+    "automarket": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "css"
         }
       },
       "root": "",
@@ -17,22 +17,30 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angular-ecard",
+            "outputPath": "dist/automarket",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
-            "inlineStyleLanguage": "scss",
+            "inlineStyleLanguage": "css",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
-              "node_modules/primeng/resources/primeng.min.css",
+              "src/style.css",
+              {
+                "input": "node_modules/~ng-zorro-antd/ng-zorro-antd.min.css",
+                "bundleName": "ng-zorro-antd",
+                "inject": true
+              },
+              {
+                "input": "node_modules/~ng-zorro-antd/style/index.min.css",
+                "bundleName": "ng-zorro-antd",
+                "inject": true
+              },
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
               "node_modules/ngx-toastr/toastr.css"
             ],
@@ -66,10 +74,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular-ecard:build:production"
+              "buildTarget": "automarket:build:production"
             },
             "development": {
-              "buildTarget": "angular-ecard:build:development"
+              "buildTarget": "automarket:build:development"
             }
           },
           "options": {
@@ -80,7 +88,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "angular-ecard:build"
+            "buildTarget": "automarket:build"
           }
         },
         "test": {
@@ -91,13 +99,13 @@
               "zone.js/testing"
             ],
             "tsConfig": "tsconfig.spec.json",
-            "inlineStyleLanguage": "scss",
+            "inlineStyleLanguage": "css",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/style.css"
             ],
             "scripts": []
           }

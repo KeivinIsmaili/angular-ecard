@@ -4,12 +4,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TopMenuComponent } from './top-menu.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { BadgeModule } from 'primeng/badge';
-import { ButtonModule } from 'primeng/button';
-import { SplitButtonModule } from 'primeng/splitbutton';
-import { ToolbarModule } from 'primeng/toolbar';
-import { InputTextModule } from 'primeng/inputtext';
-import { MenuModule } from 'primeng/menu';
 
 @NgModule({
     declarations: [
@@ -19,13 +13,7 @@ import { MenuModule } from 'primeng/menu';
         BrowserModule,
         FormsModule,
         CommonModule,
-        FontAwesomeModule,
-        ButtonModule,
-        BadgeModule,
-        SplitButtonModule,
-        ToolbarModule,
-        InputTextModule,
-        MenuModule
+        FontAwesomeModule
     ],
     exports: [
         TopMenuComponent

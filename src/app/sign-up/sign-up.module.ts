@@ -6,7 +6,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ToastrModule } from 'ngx-toastr';
 import { SignUpComponent } from './sign-up.component';
-import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
     declarations: [
@@ -19,7 +18,6 @@ import { InputTextModule } from 'primeng/inputtext';
         HttpClientModule,
         FontAwesomeModule,
         ToastrModule,
-        InputTextModule
     ],
     providers: [],
     exports: [
